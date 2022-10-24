@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap');
+
+:root {
+    // Primary
+        --Soft-red: hsl(10, 79%, 65%);
+        --Cyan: hsl(186, 34%, 60%);
+    // Neutral
+        --Dark-brown: hsl(25, 47%, 15%);
+        --Medium-brown: hsl(28, 10%, 53%);
+        --Cream: hsl(27, 66%, 92%);
+        --Very-pale-orange: hsl(33, 100%, 98%);
+    // font-size & font-family
+        --font-family: 'DM Sans', sans-serif;
+        --font-size: 18px;
+        --font-weight-400: 400;
+        --font-weight-700: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--font-size);
+
+    background-color: var(--Cream);
+}
+
+main {
+    min-width: 400px;
+
+    header {
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--Soft-red);
+        border-radius: 15px;
+        color: var(--Very-pale-orange);
+        padding: 25px;
+        margin-bottom: 25px;
+
+        small {
+            display: block;
+            font-weight: var(--font-weight-400);
+            margin-bottom: 10px;
+        }
+        h3 {
+            font-size: 1.7rem;
+            font-weight: var(--font-weight-700);
+        }
+    }
+
+    section {
+        background-color: var(--Very-pale-orange);
+        border-radius: 15px;
+        padding: 25px;
+
+        h1 {
+            color: var(--Dark-brown);
+            margin-bottom: 10px;
+        }
+
+        .graphs {
+            border-bottom: 2px solid var(--Cream);
+            margin-bottom: 25px;
+            padding-bottom: 28px;
+            text-align: center;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 180px;
+            grid-gap: 1rem;
+            align-items: flex-end;
+            
+            .un {
+                height: 200px;
+
+                .col {
+                    background-color: var(--Soft-red);
+                    border-radius: 5px;
+                }
+    
+                p {
+                    color: var(--Medium-brown);
+                    font-size: .8rem;
+                }
+            }
+
+        }
+
+
+        .infos {
+            p {
+                font-size: 1rem;
+                color: var(--Medium-brown);
+            }            
+            .infos-content {
+                display: flex;
+                justify-content: space-between;
+
+                h2 {
+                    color: var(--Dark-brown);
+                    font-size: 2.6rem;
+                }
+
+                div {
+                    text-align: right;
+
+                    h4 {
+                        color: var(--Dark-brown);
+                        font-weight: var(--font-weight-700);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.current-day {
+    background-color: var(--Cyan);
+}
+
+.active-col {
+    opacity: 0.6;
+}

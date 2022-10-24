@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+:root {
+  --Soft-red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+  --Dark-brown: hsl(25, 47%, 15%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-pale-orange: hsl(33, 100%, 98%);
+  --font-family: "DM Sans", sans-serif;
+  --font-size: 18px;
+  --font-weight-400: 400;
+  --font-weight-700: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font-size);
+  background-color: var(--Cream);
+}
+
+main {
+  min-width: 400px;
+}
+main header {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--Soft-red);
+  border-radius: 15px;
+  color: var(--Very-pale-orange);
+  padding: 25px;
+  margin-bottom: 25px;
+}
+main header small {
+  display: block;
+  font-weight: var(--font-weight-400);
+  margin-bottom: 10px;
+}
+main header h3 {
+  font-size: 1.7rem;
+  font-weight: var(--font-weight-700);
+}
+main section {
+  background-color: var(--Very-pale-orange);
+  border-radius: 15px;
+  padding: 25px;
+}
+main section h1 {
+  color: var(--Dark-brown);
+  margin-bottom: 10px;
+}
+main section .graphs {
+  border-bottom: 2px solid var(--Cream);
+  margin-bottom: 25px;
+  padding-bottom: 28px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 180px;
+  grid-gap: 1rem;
+  align-items: flex-end;
+}
+main section .graphs .un {
+  height: 200px;
+}
+main section .graphs .un .col {
+  background-color: var(--Soft-red);
+  border-radius: 5px;
+}
+main section .graphs .un p {
+  color: var(--Medium-brown);
+  font-size: 0.8rem;
+}
+main section .infos p {
+  font-size: 1rem;
+  color: var(--Medium-brown);
+}
+main section .infos .infos-content {
+  display: flex;
+  justify-content: space-between;
+}
+main section .infos .infos-content h2 {
+  color: var(--Dark-brown);
+  font-size: 2.6rem;
+}
+main section .infos .infos-content div {
+  text-align: right;
+}
+main section .infos .infos-content div h4 {
+  color: var(--Dark-brown);
+  font-weight: var(--font-weight-700);
+}
+
+.current-day {
+  background-color: var(--Cyan);
+}
+
+.active-col {
+  opacity: 0.6;
+}/*# sourceMappingURL=style.css.map */
