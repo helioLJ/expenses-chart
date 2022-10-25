@@ -21,7 +21,7 @@ const data = [
     },
     {
       "day": "sat",
-      "amount": 43.28
+      "amount": 83.28
     },
     {
       "day": "sun",
@@ -30,6 +30,11 @@ const data = [
 ]
 
 const cols = document.querySelectorAll('.col')
+const hoverStats = document.querySelectorAll('.hover-stats')
+const dayNames = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"];
+const date = new Date()
+let currentDay = dayNames[date.getDay()]
+let totalMounth
 
 cols.forEach((col) => {
     data.forEach((days) => {
@@ -38,4 +43,15 @@ cols.forEach((col) => {
         }
     })
     
+    if (col.nextElementSibling.textContent === currentDay) {
+      col.classList.add("current-day")
+    }
+})
+
+hoverStats.forEach((stats) => {
+  data.forEach((days => {
+    if (days.day === stats.parentElement.nextElementSibling.textContent) {
+        stats.textContent = "$" + days.amount
+    }
+  }))
 })

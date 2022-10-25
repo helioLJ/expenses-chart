@@ -34,7 +34,8 @@ body {
 }
 
 main {
-    min-width: 400px;
+    max-width: 400px;
+    width: 90%;
 
     header {
         display: flex;
@@ -69,21 +70,40 @@ main {
         .graphs {
             border-bottom: 2px solid var(--Cream);
             margin-bottom: 25px;
-            padding-bottom: 28px;
             text-align: center;
-
+            padding-bottom: 20px;
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
             grid-template-rows: 180px;
             grid-gap: 1rem;
-            align-items: flex-end;
             
             .un {
-                height: 200px;
-
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                
                 .col {
                     background-color: var(--Soft-red);
                     border-radius: 5px;
+                    cursor: pointer;
+                    position: relative;
+
+                    &:hover {
+                        background-color: hsla(10, 79%, 65%, 0.8);
+                    }
+
+                    .hover-stats {
+                        display: none;
+                        background-color: var(--Dark-brown);
+                        border-radius: 5px;
+                        font-size: .9rem;
+                        color: var(--Very-pale-orange);
+                        padding: .4rem;
+                        position: absolute;
+                        top: -40px;
+                        right: -14px;
+                    }
+
                 }
     
                 p {
@@ -97,7 +117,6 @@ main {
 
         .infos {
             p {
-                font-size: 1rem;
                 color: var(--Medium-brown);
             }            
             .infos-content {
@@ -110,6 +129,7 @@ main {
                 }
 
                 div {
+                    font-size: .85rem !important;
                     text-align: right;
 
                     h4 {
@@ -123,9 +143,12 @@ main {
 }
 
 .current-day {
-    background-color: var(--Cyan);
+    background-color: var(--Cyan) !important;
+    &:hover {
+        background-color: hsla(186, 34%, 60%, 0.8) !important;
+    }
 }
 
-.active-col {
-    opacity: 0.6;
+.col:hover .hover-stats {
+    display: block !important;
 }
